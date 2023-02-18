@@ -38,12 +38,12 @@ on:
   push:
     branches: [main]
 jobs: 
-  built: 
+  build: 
     runs-on: ubuntu-latest
     steps:
-      - name: Install Node.js
       - uses: actions/setup-node@v2
+      - name: Install Node.js
         with: 
           node-version: '14.x'
       - name: Print Node Version
-        run: node -v
+        run: node -v 
