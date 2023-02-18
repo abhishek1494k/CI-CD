@@ -1,11 +1,15 @@
 module.exports = {
-  env: {
-    browser: false,
-    commonjs: true,
-    es2021: true,
+  'env': {
+    'browser': false,
+    'commonjs': true,
+    'es2021': true,
   },
-  overrides: [
+  'extends': 'google',
+  'overrides': [
   ],
-  rules: {
+  'parserOptions': {
+    'ecmaVersion': 'latest',
+  },
+  'rules': {
   },
 };
