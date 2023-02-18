@@ -1,6 +1,7 @@
 const app = require('express')();
 
 app.get('/', function(req, res){
+    value=100;
     res.send('Hello World !!');
 })
 
