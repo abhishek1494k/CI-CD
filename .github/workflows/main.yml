@@ -41,8 +41,8 @@ jobs:
   built: 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v2
       - name: Install Node.js
+      - uses: actions/setup-node@v2
         with: 
           node-version: '14.x'
       - name: Print Node Version
