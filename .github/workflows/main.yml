@@ -23,6 +23,16 @@
 # # env variables
 # value:  ${{ env.VALUE }}
 # variable: ${{ github.VARIABLE_NAME }}
+
+# Workflow ->
+# When to run
+# on -> when to trigger the workflow, on push to codebase, raising a pr to codebase
+
+#How to run
+# job - a task that can be run
+# Define a series of steps inside a job to execute the workflow
+# steps: a sequence of tasks or action that make up a job
+
 name: projectX
 on: 
   push:
@@ -30,10 +40,14 @@ on:
 jobs: 
   built: 
     runs-on: ubuntu-latest
-    steps: 
+    steps:
+      - uses: actions/setup-node@v2
       - name: Install Node.js
-        uses: actions/setup-node@v2
         with: 
           node-version: '14.x'
       - name: Print Node Version
-        run: node -v 
+        run: node -v
+      - name: Print npm version
+        run: npm -v
+      - name: Print pwd
+        run: pwd
