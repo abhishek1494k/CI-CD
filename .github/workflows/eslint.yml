@@ -6,10 +6,9 @@ jobs:
   eslint: 
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - uses: actions/checkout@v2
       - name: Install Node.js
         run: node --version
-      - uses: actions/checkout@v2
       - name: Install Dependencies
         run: npm install 
       - name: Run ESLint
