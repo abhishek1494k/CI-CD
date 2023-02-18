@@ -45,4 +45,6 @@ jobs:
       - name: Install Node.js
         run: node --version 
       - name: Install npm
-        run: npm --version 
+        run: npm --version
+      - name: pwd
+        run:  pwd 
