@@ -14,5 +14,5 @@ jobs:
       - name: pwd
         run:  pwd
       - name: Run eslint
-        run: npm eslint .
+        run: npx eslint .
       
