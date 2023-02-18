@@ -47,7 +47,3 @@ jobs:
           node-version: '14.x'
       - name: Print Node Version
         run: node -v
-      - name: Print npm version
-        run: npm -v
-      - name: Print pwd
-        run: pwd
