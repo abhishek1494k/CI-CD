@@ -8,6 +8,7 @@ jobs:
     steps:
       - name: Checkout Code
       - name: Install Node.js
+        run: node --version
       - uses: actions/checkout@v2
       - name: Install Dependencies
         run: npm install 
