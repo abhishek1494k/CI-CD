@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    browser: false,
+    browser: false,,
     es2021: true,
   },
   overrides: [
