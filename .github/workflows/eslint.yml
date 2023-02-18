@@ -1,19 +1,4 @@
-# name: Run eslint
-# on: 
-#   push:
-#     branches: [main]
-# jobs: 
-#   build: 
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v2
-#       - name: Install Node.js
-#         run: node --version
-#       - name: Install Dependencies
-#         run: npm install 
-#       - name: Run ESLint
-#         run: npx eslint
-name: Run eslint
+name: projectX
 on: 
   push:
     branches: [main]
@@ -21,10 +6,10 @@ jobs:
   build: 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
       - name: Install Node.js
-        run: node --version
-      - name: Install Dependencies
-        run: npm install 
-      - name: Run ESLint
-        run: npx eslint
+        run: node --version 
+      - name: Install npm
+        run: npm --version
+      - name: pwd
+        run:  pwd
