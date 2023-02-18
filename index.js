@@ -2,7 +2,7 @@ const app = require('express')();
 const YAML = require('yaml')
 
 app.get('/', function(req, res){
-    value=100;
+    // value=100;
     res.send('Hello World !!');
 
 })
