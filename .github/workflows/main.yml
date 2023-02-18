@@ -1,1 +1,39 @@
-# hello
+# # hello
+# # key: value
+# title: Website Name
+# description: A website to upload a website
+# age: 30
+# #string, arrays, objects
+
+# #array
+# tags:
+#   - technology
+#   - images
+#   - creative
+# #indentation matters
+# # spaces
+
+# #objects
+# address: 
+#   street: MG Road
+#   city: Banglore
+#   state:  KA
+
+# #Github actions
+# # env variables
+# value:  ${{ env.VALUE }}
+# variable: ${{ github.VARIABLE_NAME }}
+name: projectX
+on: 
+  push:
+    branches: [main]
+jobs: 
+  built: 
+    run-on: ubuntu-latest
+    steps: 
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with: 
+          node-version: '14.x'
+      - name: Print Node Version
+        run: node -v 
