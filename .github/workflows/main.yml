@@ -33,18 +33,18 @@
 # Define a series of steps inside a job to execute the workflow
 # steps: a sequence of tasks or action that make up a job
 
-# name: projectX
-# on: 
-#   push:
-#     branches: [main]
-# jobs: 
-#   build: 
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/setup-node@v3
-#       - name: Install Node.js
-#         run: node --version 
-#       - name: Install npm
-#         run: npm --version
-#       - name: pwd
-#         run:  pwd
+name: projectX
+on: 
+  push:
+    branches: [main]
+jobs: 
+  build: 
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+      - name: Install Node.js
+        run: node --version 
+      - name: Install npm
+        run: npm --version
+      - name: pwd
+        run:  pwd
