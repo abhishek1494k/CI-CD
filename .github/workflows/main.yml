@@ -41,6 +41,8 @@ jobs:
   build: 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
       - name: Install Node.js
         run: node --version 
+      - name: Install npm
+        run: npm --version 
