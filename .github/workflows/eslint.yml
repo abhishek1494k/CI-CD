@@ -1,17 +1,17 @@
-name: eslint
+name: Run eslint
 on: 
   push:
     branches: [main]
 jobs: 
-  build: 
+  eslint: 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
+      - name: Checkout Code
       - name: Install Node.js
-        run: node --version 
-      - name: Install npm
-        run: npm --version
-      - name: pwd
-        run:  pwd
-      - name: Run ESLINT
+      - uses: actions/checkout@v2
+        with:
+          node-version: '14.x'
+      - name: Install Dependencies
+        run: npm install 
+      - name: Run ESLint
         run: npx eslint
