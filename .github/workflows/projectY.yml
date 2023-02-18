@@ -1,0 +1,16 @@
+name: projectX
+on: 
+  push:
+    branches: [main]
+jobs: 
+  built: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with: 
+          node-version: '14.x'
+      - name: Print Node Version
+        run: node -v 
+      - name: Run eslint
+        run: npx eslint .
