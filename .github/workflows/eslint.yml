@@ -31,3 +31,6 @@ jobs:
       run: npm install 
     - name: Run ESLint 
       run: npx eslint .
+
+#   uses: actions/checkout@v3 - copy index.js file into system
+#   uses: actions/setup-node@v2 - setting up node
