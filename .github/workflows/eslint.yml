@@ -14,23 +14,23 @@
 #       - name: Run eslint
 #         run: npx eslint
       
-# name: Run ESLint 
-# on: 
-#   push: 
-#     branches: [main]
-# jobs: 
-#   build: 
-#     runs-on: ubuntu-latest 
-#     steps:
-#     - uses: actions/checkout@v3 
-#     - name: Install Node.js
-#       uses: actions/setup-node@v2 
-#       with: 
-#         node-version: '14.x' 
-#     - name: Install dependencies 
-#       run: npm install 
-#     - name: Run ESLint 
-#       run: npx eslint .
+name: Run ESLint 
+on: 
+  push: 
+    branches: [main]
+jobs: 
+  build: 
+    runs-on: ubuntu-latest 
+    steps:
+    - uses: actions/checkout@v3 
+    - name: Install Node.js
+      uses: actions/setup-node@v2 
+      with: 
+        node-version: '14.x' 
+    - name: Install dependencies 
+      run: npm install 
+    - name: Run ESLint 
+      run: npx eslint .
 
 #   uses: actions/checkout@v3 - copy index.js file into system
 #   uses: actions/setup-node@v2 - setting up node
